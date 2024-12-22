@@ -48,7 +48,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
 
       <div className="text">
         <p
-          className="para"
+          className={task.completed ? "para para-completed" : "para"}
         >
           {task.title}
         </p>

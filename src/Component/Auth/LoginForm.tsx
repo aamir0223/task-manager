@@ -10,13 +10,12 @@ const LoginForm: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const loggedInUser = localStorage.getItem("loggedInUser");
   useEffect(() => {
-    const loggedInUser = localStorage.getItem("loggedInUser");
     if (loggedInUser) {
       navigate("/tasks");
     }
-  }, [navigate]);
+  }, [navigate, loggedInUser]);
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

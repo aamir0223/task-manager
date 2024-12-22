@@ -185,7 +185,7 @@
                 justify-content: space-between;
                 height: 100%;
 
-                p {
+                .para {
                     font-size: 14px;
                     font-weight: 400;
                     color: $text-color;
@@ -193,6 +193,10 @@
                     -webkit-line-clamp: 4;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
+                }
+
+                .para-completed {
+                    text-decoration: line-through;
                 }
 
                 .btn-group {
