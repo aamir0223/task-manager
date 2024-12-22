@@ -1,0 +1,161 @@
+.register {
+    display: flex;
+    align-items: center;
+
+    .register-left {
+        width: 50%;
+        padding-left: 50px;
+
+        h2 {
+            font-size: 30px;
+            font-weight: 500;
+            color: #000;
+            margin-bottom: -10px;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(33, 33, 33, 0.7);
+            margin-bottom: 40px;
+            width: 70%;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            width: 70%;
+
+            label {
+                font-size: 12px;
+                font-weight: 400;
+                color: rgba(33, 33, 33, 1);
+                margin-bottom: 5px;
+
+            }
+
+            input {
+                outline: none;
+                padding: 13px;
+                border: 1.5px solid rgba(0, 0, 0, 0.1);
+                border-radius: 6px;
+                font-size: 14px;
+                font-weight: 500;
+
+
+            }
+
+            input:hover {
+                border: 1.5px solid #31C2E4;
+            }
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: $primary-color;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            width: 70%;
+            margin-top: 30px;
+
+            &:hover {
+                background: $hover-primary;
+                box-shadow: 0 4px 10px rgba($primary-color, 0.5);
+                transform: scale(1.05);
+            }
+
+            .icon {
+                margin-right: 10px;
+                font-size: 18px;
+                transition: transform 0.3s ease;
+            }
+
+            &:hover .icon {
+                transform: translateX(5px);
+            }
+        }
+
+        .already {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+            color: rgba(33, 33, 33, 0.7);
+
+            a {
+                font-family: 500;
+                color: #000;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .register-right {
+        width: 50%;
+
+        img {
+            max-width: 100%;
+            max-height: 80%;
+        }
+    }
+
+}
+
+
+
+@media screen and (max-width: 480px) {
+    .register {
+        flex-direction: column-reverse;
+
+        .register-left {
+            width: 100%;
+            padding-left: 30px;
+            margin-top: 100px;
+
+            h2 {
+                font-size: 25px;
+
+            }
+
+            p {
+                font-size: 12px;
+                margin-bottom: 20px;
+                width: 90%;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                padding-bottom: 30px;
+            }
+
+            .field {
+
+                width: 90%;
+
+            }
+
+            button {
+                width: 90%;
+            }
+
+
+            .already {
+
+                font-size: 14px;
+            }
+        }
+
+        .register-right {
+            display: none;
+        }
+
+    }
+}
